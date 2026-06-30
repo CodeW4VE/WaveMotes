@@ -8,7 +8,17 @@ group = project.maven_group
 
 repositories {
 	// Mod Menu (solo para compilar la integracion opcional; no se empaqueta).
-	maven { url = "https://maven.terraformersmc.com/releases/" }
+	// Se baja del maven de Modrinth: mas fiable en CI que el CDN de TerraformersMC,
+	// que devuelve 400 de forma intermitente contra las IPs de GitHub Actions.
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter { includeGroup "maven.modrinth" }
+	}
 }
 
 loom {
@@ -34,7 +44,7 @@ dependencies {
 	// Mod Menu: solo en tiempo de compilacion (modCompileOnly). No es dependencia
 	// de runtime ni se mete en el jar: la integracion solo se activa si el jugador
 	// tiene Mod Menu instalado; si no, Fabric ignora el entrypoint.
-	modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+	modCompileOnly "maven.modrinth:modmenu:${project.modmenu_version}"
 }
 
 processResources {

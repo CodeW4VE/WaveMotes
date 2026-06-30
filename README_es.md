@@ -12,6 +12,13 @@
 
 [English](README.md) | Español
 
+<!--
+CAPTURA: reemplaza esta nota por un GIF del popup `:emote:` en acción.
+Guarda el archivo como docs/preview.gif y descomenta la línea de abajo.
+![Vista previa de WaveMotes](docs/preview.gif)
+-->
+*Pronto va aquí un GIF del popup en acción.*
+
 </div>
 
 ---
@@ -72,22 +79,34 @@ La pantalla de config (y el archivo en `config/wavemotes.json`) tiene:
 > componentes localmente, pero igual llegan bien a Discord por el bridge. Vienen desactivados
 > por defecto para que el menú se centre en el pack propio.
 
-## Pack de emotes embebido y el lado del servidor
+## Cómo encaja: el stack de emotes W4VE
 
-Los emotes incluidos son el pack de la comunidad de [MineWave](https://w4ve.xyz/), incluido
-como muestra. El **mod cliente funciona en cualquier servidor** (vanilla, con mods, hosts
-compartidos, lo que sea) porque renderiza tus emotes localmente para *ti*.
+WaveMotes es la **mitad cliente** de un sistema de dos partes. Funciona solo, pero está
+pensado para ir al lado de un lado servidor que hace el trabajo pesado.
 
-Si quieres que **los demás jugadores también vean tus emotes personalizados**, eso requiere
-una parte **del lado del servidor** (resource pack + bridge de chat) corriendo en un
-servidor que controles:
+- **WaveMotes (este mod, lado cliente):** el popup `:emote:` y el render del lado del cliente.
+  *Tú* ves tus emotes en cualquier servidor, aunque nunca te llegue un resource pack, porque
+  las texturas van embebidas en el jar a propósito.
+- **Lado servidor W4VE (el verdadero motor):** hace que *todos* en el servidor vean los emotes,
+  incluso jugadores vanilla sin mod, y los puentea hacia y desde Discord. Tres piezas:
+  - un **resource pack** con una fuente PUA custom que dibuja cada emote, enviado a cada cliente;
+  - **[Styled Chat](https://modrinth.com/mod/styled-chat)**, para que escribir `:tet:` in-game
+    se convierta en el emote para *todos* los jugadores;
+  - un **[ChatBridge](https://github.com/CodeW4VE/ChatBridge)** parcheado que reescribe
+    `:name:` ↔ `<:name:id>` entre Minecraft y Discord.
 
-- ✅ Funciona en un **servidor dedicado o VPS** donde tengas acceso completo a plugins/archivos.
-- ❌ **No** es posible en hosts compartidos cerrados (Shockbyte, Aternos, etc.), donde no
-  puedes instalar la parte del servidor.
+Úsalos juntos (como en [MineWave](https://w4ve.xyz/)) y tienes la experiencia completa:
+un selector estilo Discord, emotes que ven *todos*, y un puente vivo con Discord.
 
-El componente del servidor es parte del proyecto más amplio [CodeW4VE](https://github.com/CodeW4VE)
-y se distribuye por separado.
+> **El mod igual funciona solo.** En solitario tienes el selector y tus propios emotes
+> renderizados localmente. Lo que *no* tienes sin el lado servidor: que los demás vean tus
+> emotes personalizados, y el puente con Discord.
+
+El lado servidor necesita un **servidor dedicado o VPS** con acceso completo a archivos/plugins.
+**No** es posible en hosts compartidos cerrados (Shockbyte, Aternos, etc.). Es infraestructura
+a medida (un resource pack atado a un guild de Discord, más su propio hosting), no una descarga
+de un clic. Por ahora la pieza empaquetada es el puente de chat, **[ChatBridge](https://github.com/CodeW4VE/ChatBridge)**;
+el resto vive en el proyecto más amplio [CodeW4VE](https://github.com/CodeW4VE).
 
 ## Compatibilidad
 
