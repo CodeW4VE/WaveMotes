@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Fix: pressing Tab on an empty chat box no longer pops up the full emote list, so vanilla player-name completion works again. Emote suggestions now need at least one character after the `:` (e.g. `:sku`).
+- Emote size is now a one-line change: see the README, or run `tools/set_emote_size.py`.
+
 ## 1.0.0
 
 First public release.
