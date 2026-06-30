@@ -1,0 +1,16 @@
+{
+	"screen.wavemotes.title": "WaveMotes",
+	"option.wavemotes.builtin": "Emotes propios",
+	"option.wavemotes.discord_all": "Emojis de Discord (todos)",
+	"option.wavemotes.add": "Código de emoji de Discord",
+	"option.wavemotes.add_btn": "Añadir",
+	"option.wavemotes.clear_list": "Vaciar emojis añadidos",
+	"msg.wavemotes.cleared": "Lista de emojis añadidos vaciada",
+	"msg.wavemotes.added": "Añadido :%s:",
+	"msg.wavemotes.already": ":%s: ya estaba añadido",
+	"msg.wavemotes.removed": "Quitado :%s:",
+	"msg.wavemotes.notfound": "No hay ningún emoji de Discord llamado :%s:",
+	"msg.wavemotes.whitelist": "Emojis de Discord añadidos: %s",
+	"key.wavemotes.config": "Abrir configuración",
+	"key.categories.wavemotes": "WaveMotes"
+}

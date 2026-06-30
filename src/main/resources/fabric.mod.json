@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "wavemotes",
+	"version": "${version}",
+	"name": "WaveMotes",
+	"description": "Type :emote: in chat and pick it from a popup, just like commands. Built-in emote pack rendered client-side (no resource pack needed) plus optional Discord native emojis. Single jar, no extra dependencies.",
+	"authors": [
+		"tvtvirus"
+	],
+	"contact": {
+		"homepage": "https://w4ve.xyz/",
+		"sources": "https://github.com/CodeW4VE/WaveMotes"
+	},
+	"license": "MIT",
+	"icon": "assets/wavemotes/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.w4ve.wavemotes.WaveMotes"
+		],
+		"client": [
+			"xyz.w4ve.wavemotes.client.WaveMotesClient"
+		],
+		"modmenu": [
+			"xyz.w4ve.wavemotes.client.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		{
+			"config": "wavemotes.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
