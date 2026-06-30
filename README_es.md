@@ -79,6 +79,20 @@ La pantalla de config (y el archivo en `config/wavemotes.json`) tiene:
 > componentes localmente, pero igual llegan bien a Discord por el bridge. Vienen desactivados
 > por defecto para que el menú se centre en el pack propio.
 
+## Tamaño de los emotes
+
+¿Muy grandes? ¿Muy chicos? Todos los emotes comparten un único tamaño, así que cambiarlo es
+un solo buscar-y-reemplazar. El jar es un zip: abre `assets/minecraft/font/default.json` dentro
+y cambia cada `"height": 16` por lo que quieras (número más grande = emotes más grandes).
+`"ascent": 11` los sube o baja; una regla segura es `ascent ≈ height − 5`. Reinicia el juego y listo.
+
+¿Compilas desde el código? Un solo comando, y recompilas:
+
+```bash
+python tools/set_emote_size.py 20      # height 20, ascent automático (15)
+./gradlew build
+```
+
 ## Cómo encaja: el stack de emotes W4VE
 
 WaveMotes es la **mitad cliente** de un sistema de dos partes. Funciona solo, pero está

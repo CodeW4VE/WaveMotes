@@ -77,6 +77,20 @@ The config screen (and the file at `config/wavemotes.json`) has:
 > but they still travel correctly to Discord through a chat bridge. They're off by default
 > to keep the picker focused on the built-in pack.
 
+## Emote size
+
+Too big? Too small? Every emote shares one size, so changing it is a single find-and-replace.
+The jar is just a zip: open `assets/minecraft/font/default.json` inside it and change every
+`"height": 16` to whatever you like (bigger number = bigger emotes). `"ascent": 11` nudges them
+up or down; a safe rule of thumb is `ascent ≈ height − 5`. Restart the game and you're done.
+
+Building from source? One command does it, then rebuild:
+
+```bash
+python tools/set_emote_size.py 20      # height 20, ascent auto (15)
+./gradlew build
+```
+
 ## How it fits: the W4VE emote stack
 
 WaveMotes is the **client half** of a two-part system. It runs fine on its own, but it

@@ -8,7 +8,7 @@ published yet; copy it into the Modrinth UI when you decide to go live.
 | Field | Value |
 | --- | --- |
 | Name | WaveMotes |
-| Slug | `discord-chat-emotes` |
+| Slug | `wavemotes` |
 | Summary | Type `:emote:` in chat and pick it from a popup, like commands. Client-side rendering + optional Discord emojis. One jar. |
 | Environments | Client: **required** · Server: **unsupported** |
 | Loaders | Fabric |
@@ -42,9 +42,18 @@ full of emotes.** Pick one and the rendered emote drops straight into your messa
 
 ## ⚙️ Discord emojis
 
-Standard Unicode emoji. They always render correctly once your message reaches Discord
-through a chat bridge. In-game color depends on your client font — that's why they're off
-by default. Enable them all, or add individual ones from the config screen.
+1900+ standard Discord shortcodes, drawn in color in-game with bundled
+[Twemoji](https://github.com/jdecked/twemoji) textures. They're off by default to keep the
+picker focused on the built-in pack. Enable them all, or whitelist individual ones from the
+config screen. A few hundred multi-codepoint ones (most flags, family/ZWJ sequences) render
+as their components locally but still travel correctly to Discord.
+
+## 📏 Emote size
+
+Every emote shares one size, so changing it is a single find-and-replace. The jar is a zip:
+open `assets/minecraft/font/default.json` and change every `"height": 16` (bigger = bigger
+emotes); `"ascent": 11` moves them up/down (rule of thumb: `ascent ≈ height − 5`). Restart and
+done. Building from source? `python tools/set_emote_size.py 20`.
 
 ## 🖥️ Want everyone to see your emotes?
 
