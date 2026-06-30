@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Slightly smaller default emote size (height 16 → 14) for a tighter fit next to chat text. You can still set any size yourself: see the README or run `tools/set_emote_size.py`.
+
 ## 1.0.2
 
 - Typing `:` again opens the full picker right away (1.0.1 wrongly required a letter first). 
