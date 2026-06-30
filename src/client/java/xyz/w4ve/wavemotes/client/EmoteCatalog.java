@@ -113,6 +113,9 @@ public final class EmoteCatalog {
 	 * Sugerencias para un prefijo, respetando la config:
 	 * emotes propios si estan activos; emojis de Discord si estan TODOS activos
 	 * o el shortcode esta en la whitelist. Case-insensitive.
+	 * Con prefijo VACIO (solo ":") la lista trae unicamente los emotes propios
+	 * (+ los de Discord del whitelist); el set completo de Discord aparece solo
+	 * al teclear al menos un caracter, para no inundar la lista limpia.
 	 */
 	public static List<Entry> matching(String prefix) {
 		WaveMotesConfig cfg = WaveMotesConfig.get();
@@ -131,8 +134,14 @@ public final class EmoteCatalog {
 		}
 
 		boolean allAllowed = cfg.discordNativeEnabled;
+		boolean typedPrefix = !p.isEmpty();
 		for (String n : DISCORD_NAMES) {
-			if (!allAllowed && !cfg.enabledNativeEmotes.contains(n)) {
+			// Con ":" a secas (prefijo vacio) NO volcamos los ~1900 emojis de Discord:
+			// la lista limpia muestra solo los emotes propios. Los de Discord aparecen
+			// al teclear algo (":sku"). Los del whitelist (anadidos a proposito) si
+			// salen siempre.
+			boolean wanted = cfg.enabledNativeEmotes.contains(n) || (allAllowed && typedPrefix);
+			if (!wanted) {
 				continue;
 			}
 			if (n.startsWith(p)) {

@@ -12,12 +12,9 @@
 
 [English](README.md) | Español
 
-<!--
-CAPTURA: reemplaza esta nota por un GIF del popup `:emote:` en acción.
-Guarda el archivo como docs/preview.gif y descomenta la línea de abajo.
-![Vista previa de WaveMotes](docs/preview.gif)
--->
-*Pronto va aquí un GIF del popup en acción.*
+![WaveMotes: el selector de emotes en acción](docs/preview.gif)
+
+![Emotes renderizados en el chat](docs/chat-example.png)
 
 </div>
 

@@ -22,12 +22,10 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * Hace que al ir tecleando {@code :nombre} (a partir del primer caracter tras
- * los dos puntos) aparezca SOLO, sin tener que tabular, el mismo popup de
- * sugerencias que sale con {@code /}, pero con los emotes. Al elegir uno se
- * inserta el glifo (que se ve renderizado por la fuente embebida del mod).
- * Con el chat vacio o solo {@code :}, NO interferimos: el Tab de vanilla sigue
- * sirviendo para autocompletar nombres de jugadores.
+ * Hace que al escribir {@code :} (y al ir tecleando {@code :nombre}) aparezca
+ * SOLO, sin tener que tabular, el mismo popup de sugerencias que sale con
+ * {@code /}, pero con los emotes. Al elegir uno se inserta el glifo (que se ve
+ * renderizado por la fuente embebida del mod).
  *
  * Interceptamos en HEAD y, cuando detectamos un token de emote, montamos las
  * sugerencias nosotros y cancelamos la version vanilla de updateCommandInfo,
@@ -62,13 +60,8 @@ public abstract class CommandSuggestionsMixin {
 		if (word.indexOf(' ') >= 0) {
 			return;
 		}
-		// Token vacio (solo ":") -> NO tomamos el control: dejamos que vanilla maneje
-		// el Tab (p. ej. autocompletar nombres de jugadores con el chat vacio). Hace
-		// falta al menos un caracter tras los ":" para sugerir emotes (":sku" -> :skull:).
-		if (word.isEmpty()) {
-			return;
-		}
 
+		// word vacio (solo ":") -> muestra todos, igual que "/".
 		List<EmoteCatalog.Entry> matches = EmoteCatalog.matching(word);
 		if (matches.isEmpty()) {
 			return; // que vanilla siga (puede ser otra cosa)

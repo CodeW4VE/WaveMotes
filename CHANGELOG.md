@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Typing `:` again opens the full picker right away (1.0.1 wrongly required a letter first). 
+- The bare `:` list now shows only your own emotes; the 1900 optional Discord emojis appear only once you start typing a name (e.g. `:sku`), so the picker stays clean even with Discord turned on.
+
 ## 1.0.1
 
 - Fix: pressing Tab on an empty chat box no longer pops up the full emote list, so vanilla player-name completion works again. Emote suggestions now need at least one character after the `:` (e.g. `:sku`).
