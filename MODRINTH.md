@@ -1,4 +1,4 @@
-# Modrinth — publishing draft (DO NOT auto-publish)
+# Modrinth: publishing draft (DO NOT auto-publish)
 
 This is a ready-to-paste draft for the Modrinth project page. Nothing here is
 published yet; copy it into the Modrinth UI when you decide to go live.
@@ -22,12 +22,12 @@ published yet; copy it into the Modrinth UI when you decide to go live.
 
 # WaveMotes
 
-**Type `:` in chat and a popup appears — the same one you get with `/` commands, but
+**Type `:` in chat and a popup appears, the same one you get with `/` commands, but
 full of emotes.** Pick one and the rendered emote drops straight into your message.
 
 ## ✨ Features
 
-- **Popup autocomplete.** Type `:`, keep typing to filter (`:sku` → `:skull:`). Same UX as command suggestions — nothing new to learn.
+- **Popup autocomplete.** Type `:`, keep typing to filter (`:sku` → `:skull:`). Same UX as command suggestions, nothing new to learn.
 - **Renders client-side.** The built-in emote textures ship inside the jar, so they show up even when the server doesn't send a resource pack.
 - **Bigger than text.** Emotes are scaled up so they actually read as emotes.
 - **Optional Discord emojis.** 1900+ standard Discord shortcodes, **off by default**. Turn them all on, or whitelist just the ones you want (e.g. only `:skull:`).
@@ -59,7 +59,7 @@ done. Building from source? `python tools/set_emote_size.py 20`.
 
 The client mod renders emotes for **you** on any server. If you want **other players** to
 see your custom emotes, that needs a server-side setup (resource pack + chat bridge) on a
-**dedicated server or VPS** — it can't be done on locked-down shared hosts like Shockbyte
+**dedicated server or VPS**, and it can't be done on locked-down shared hosts like Shockbyte
 or Aternos. That server-side piece is part of the [CodeW4VE](https://github.com/CodeW4VE)
 project.
 

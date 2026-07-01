@@ -2,7 +2,7 @@
 
 # WaveMotes
 
-**Type `:emote:` in Minecraft chat and pick it from a popup — just like commands.**
+**Type `:emote:` in Minecraft chat and pick it from a popup, just like commands.**
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21%2B-brightgreen?logo=minecraft)](https://www.minecraft.net/)
 [![Fabric](https://img.shields.io/badge/Loader-Fabric-blue)](https://fabricmc.net/)
@@ -23,7 +23,7 @@ English | [Español](README_es.md)
 ## What is it?
 
 **WaveMotes** is a lightweight, client-side Fabric mod. Start typing `:` in
-chat and a suggestion popup appears — the exact same one you get with `/` commands,
+chat and a suggestion popup appears, the exact same one you get with `/` commands,
 but full of emotes. Pick one and the rendered emote is inserted into your message.
 
 It ships with an embedded emote pack that renders **client-side**, so your emotes show
@@ -35,11 +35,11 @@ the **full set of standard Discord emojis** (`:skull:` → 💀, `:fire:` → �
 
 ## Features
 
-- 🗨️ **Popup autocomplete** — type `:` to open the same dropdown as `/` commands, filtered live as you type.
-- 🖼️ **Client-side rendering** — the built-in emote textures are bundled in the jar, so they render even with no server resource pack.
-- 🔠 **Bigger than text** — emotes are scaled up so they actually read as emotes, not tiny glyphs.
-- 😀 **Optional Discord emojis** — 1900+ standard Discord shortcodes (Twemoji textures, **rendered in color in-game**), **off by default**. Enable them all, or add just the ones you want (e.g. only `:skull:`).
-- 🎛️ **In-game config screen** — Tweakeroo-style On/Off switches. Open it with `/wm` or bind a key.
+- 🗨️ **Popup autocomplete:** type `:` to open the same dropdown as `/` commands, filtered live as you type.
+- 🖼️ **Client-side rendering:** the built-in emote textures are bundled in the jar, so they render even with no server resource pack.
+- 🔠 **Bigger than text:** emotes are scaled up so they actually read as emotes, not tiny glyphs.
+- 😀 **Optional Discord emojis:** 1900+ standard Discord shortcodes (Twemoji textures, **rendered in color in-game**), **off by default**. Enable them all, or add just the ones you want (e.g. only `:skull:`).
+- 🎛️ **In-game config screen:** Tweakeroo-style On/Off switches. Open it with `/wm` or bind a key.
 - 🪶 **No dependencies** beyond Fabric API. Single jar.
 
 ## Installation
@@ -49,7 +49,7 @@ the **full set of standard Discord emojis** (`:skull:` → 💀, `:fire:` → �
 3. Download **WaveMotes** and drop both jars into your `.minecraft/mods` folder.
 4. Launch the game.
 
-This is a **client-side** mod — it does not need to be installed on the server.
+This is a **client-side** mod, so it does not need to be installed on the server.
 
 ## Usage
 
@@ -63,14 +63,14 @@ This is a **client-side** mod — it does not need to be installed on the server
 
 The config screen (and the file at `config/wavemotes.json`) has:
 
-- **Built-in emotes** — On/Off. The embedded pack, rendered client-side.
-- **Discord native emojis (all)** — On/Off, **Off by default**. Adds the full standard Discord emoji set to the popup.
-- **Add a single emoji** — type a shortcode (e.g. `skull`) and click **Add** to enable just that one without turning on the whole set. **Clear added emojis** wipes that list.
+- **Built-in emotes:** On/Off. The embedded pack, rendered client-side.
+- **Discord native emojis (all):** On/Off, **Off by default**. Adds the full standard Discord emoji set to the popup.
+- **Add a single emoji:** type a shortcode (e.g. `skull`) and click **Add** to enable just that one without turning on the whole set. **Clear added emojis** wipes that list.
 
 > **About Discord emojis:** these are standard Unicode emoji rendered with bundled
 > [Twemoji](https://github.com/jdecked/twemoji) textures, so they show **in color in-game**.
 > A few hundred multi-codepoint ones (most country flags, ZWJ sequences like family emoji)
-> can't be drawn as a single in-game glyph, so those render as their components locally —
+> can't be drawn as a single in-game glyph, so those render as their components locally,
 > but they still travel correctly to Discord through a chat bridge. They're off by default
 > to keep the picker focused on the built-in pack.
 

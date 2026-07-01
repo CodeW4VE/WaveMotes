@@ -19,7 +19,7 @@
 First public release.
 
 - `:` popup autocomplete in chat, mirroring the vanilla command suggestion UI.
-- Built-in emote pack rendered client-side (textures embedded in the jar — no server resource pack needed).
+- Built-in emote pack rendered client-side (textures embedded in the jar, no server resource pack needed).
 - Emotes scaled up to render larger than chat text.
 - Optional Discord native emojis (1900+ shortcodes) with bundled Twemoji textures, rendered in color in-game; off by default; enable all or whitelist individual ones.
 - In-game config screen (vanilla widgets, no extra dependencies), openable via `/wm` or a bindable key.

@@ -37,11 +37,11 @@ también puede sugerir el **set completo de emojis estándar de Discord** (`:sku
 
 ## Características
 
-- 🗨️ **Autocompletado con popup** — escribe `:` para abrir el mismo desplegable que los comandos `/`, filtrando en vivo mientras escribes.
-- 🖼️ **Render del lado del cliente** — las texturas del pack embebido van dentro del jar, así que se ven aunque no haya resource pack del servidor.
-- 🔠 **Más grandes que el texto** — los emotes se ven a mayor tamaño para que se lean como emotes, no como glifos diminutos.
-- 😀 **Emojis de Discord opcionales** — más de 1900 shortcodes estándar de Discord (texturas Twemoji, **se ven a color in-game**), **desactivados por defecto**. Actívalos todos, o añade solo los que quieras (ej. solo `:skull:`).
-- 🎛️ **Pantalla de config in-game** — interruptores On/Off estilo Tweakeroo. Ábrela con `/wm` o asígnale una tecla.
+- 🗨️ **Autocompletado con popup:** escribe `:` para abrir el mismo desplegable que los comandos `/`, filtrando en vivo mientras escribes.
+- 🖼️ **Render del lado del cliente:** las texturas del pack embebido van dentro del jar, así que se ven aunque no haya resource pack del servidor.
+- 🔠 **Más grandes que el texto:** los emotes se ven a mayor tamaño para que se lean como emotes, no como glifos diminutos.
+- 😀 **Emojis de Discord opcionales:** más de 1900 shortcodes estándar de Discord (texturas Twemoji, **se ven a color in-game**), **desactivados por defecto**. Actívalos todos, o añade solo los que quieras (ej. solo `:skull:`).
+- 🎛️ **Pantalla de config in-game:** interruptores On/Off estilo Tweakeroo. Ábrela con `/wm` o asígnale una tecla.
 - 🪶 **Sin dependencias** más allá de Fabric API. Un único jar.
 
 ## Instalación
@@ -65,9 +65,9 @@ Es un mod **del lado del cliente**: no hace falta instalarlo en el servidor.
 
 La pantalla de config (y el archivo en `config/wavemotes.json`) tiene:
 
-- **Emotes propios** — On/Off. El pack embebido, renderizado del lado del cliente.
-- **Emojis de Discord (todos)** — On/Off, **Off por defecto**. Añade el set completo de emojis de Discord al popup.
-- **Añadir un emoji suelto** — escribe un shortcode (ej. `skull`) y pulsa **Añadir** para activar solo ese sin encender todo el set. **Vaciar emojis añadidos** borra esa lista.
+- **Emotes propios:** On/Off. El pack embebido, renderizado del lado del cliente.
+- **Emojis de Discord (todos):** On/Off, **Off por defecto**. Añade el set completo de emojis de Discord al popup.
+- **Añadir un emoji suelto:** escribe un shortcode (ej. `skull`) y pulsa **Añadir** para activar solo ese sin encender todo el set. **Vaciar emojis añadidos** borra esa lista.
 
 > **Sobre los emojis de Discord:** son emojis Unicode estándar dibujados con texturas
 > [Twemoji](https://github.com/jdecked/twemoji) embebidas, así que **se ven a color in-game**.
